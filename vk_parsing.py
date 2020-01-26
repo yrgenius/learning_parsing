@@ -9,8 +9,9 @@ def take_posts(x):
     domain = 'fit4life_official'
     count = 100
     offset = 0
-    all_posts = []
+
     while offset < x:
+        all_posts = []
         response = requests.get('https://api.vk.com/method/wall.get',
                                 params={
                                     'access_token': token,
